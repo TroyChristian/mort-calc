@@ -73,7 +73,7 @@
                                 <state key="normal" title="Calculate Mortgage"/>
                                 <connections>
                                     <action selector="CalculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NWd-f6-UQ6"/>
-                                    <segue destination="von-me-n8s" kind="show" identifier="detailSegue" id="Eil-n1-6Wr"/>
+                                    <segue destination="von-me-n8s" kind="show" id="Eil-n1-6Wr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -224,6 +224,12 @@
                     <navigationItem key="navigationItem" id="fdL-5W-gXD"/>
                     <connections>
                         <outlet property="MortgageAmountOutlet" destination="HUP-Uk-bma" id="Prd-nP-ag0"/>
+                        <outlet property="endDate" destination="t0d-hB-GhP" id="2z2-8F-THI"/>
+                        <outlet property="monthlyPaymentOutlet" destination="Dyb-XM-4hJ" id="yJ7-QF-Hbl"/>
+                        <outlet property="startDateOutlet" destination="aq4-IA-qem" id="spN-Q6-ryO"/>
+                        <outlet property="totalInterestPaidOutlet" destination="Num-r3-XLl" id="bcx-ay-uz3"/>
+                        <outlet property="totalNumberOfPaymentsOutlet" destination="vmc-ZR-qbG" id="H9O-wN-mkR"/>
+                        <outlet property="totalPaymentOutlet" destination="ffw-x2-swB" id="W7c-tQ-tei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Vt-io-xJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

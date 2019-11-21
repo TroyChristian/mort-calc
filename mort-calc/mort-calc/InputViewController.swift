@@ -23,7 +23,7 @@ class InputViewController: UIViewController {
          guard let fixedIR =  Int(IROutlet.text!) else {return}
          guard let startDate = startDateOutlet.text else {return}
           inputMortgage = mortgageController.createMortgage(loan:fixedMA, term: fixedTerm, interestRate: fixedIR, startDate:startDate)
-          print("I made it to line 26")
+          
              
         //  performSegue(withIdentifier: "detailSegue", sender: sender)}
     }
@@ -93,9 +93,8 @@ class InputViewController: UIViewController {
                       guard let vc = segue.destination as? DetailViewController else {return}
                    vc.MC = mortgageController
                       vc.detailMortgage = inputMortgage
-                    print("I MADE IT TO LINE 92")
-                    print(inputMortgage)
-                    print(vc.detailMortgage)
+                    
+                  
             
                  }
 

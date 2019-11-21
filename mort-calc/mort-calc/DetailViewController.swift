@@ -14,6 +14,18 @@ class DetailViewController: UIViewController {
     var detailMortgage:Mortgage? 
     @IBOutlet weak var MortgageAmountOutlet: UILabel!
     
+    @IBOutlet weak var monthlyPaymentOutlet: UILabel!
+    
+    @IBOutlet weak var totalNumberOfPaymentsOutlet: UILabel!
+       @IBOutlet weak var startDateOutlet: UILabel!
+    
+    
+    @IBOutlet weak var endDateOutlet: UILabel!
+    
+    
+    @IBOutlet weak var totalInterestPaidOutlet: UILabel!
+    
+    @IBOutlet weak var totalPaymentOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +34,7 @@ class DetailViewController: UIViewController {
       
     
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
