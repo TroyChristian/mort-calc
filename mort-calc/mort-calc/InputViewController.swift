@@ -27,9 +27,8 @@ class InputViewController: UIViewController {
        guard let fixedTerm = Int(inputTerm.text!) else {return}
        guard let fixedIR =  Int(IROutlet.text!) else {return}
        guard let startDate = startDateOutlet.text else {return}
-        inputMortgage = mortgageController.createMortgage(loan:fixedMA, term: fixedTerm, interestRate: fixedIR, startDate:startDate)}
-       // performSegue(withIdentifier: "detailSegue", sender: sender)
-        
+        inputMortgage = mortgageController.createMortgage(loan:fixedMA, term: fixedTerm, interestRate: fixedIR, startDate:startDate)
+        performSegue(withIdentifier: "detailSegue", sender: sender)}
 
         
         

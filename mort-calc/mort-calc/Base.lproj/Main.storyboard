@@ -71,6 +71,9 @@
                                 <rect key="frame" x="149" y="543" width="135" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate Mortgage"/>
+                                <connections>
+                                    <segue destination="von-me-n8s" kind="show" identifier="detailSegue" id="nRc-cq-Fsy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -114,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="vkN-Kn-kbU">
-                                <rect key="frame" x="40" y="153" width="154.5" height="569.5"/>
+                                <rect key="frame" x="40" y="197" width="154.5" height="569.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortgage Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deg-rW-nIs">
                                         <rect key="frame" x="0.0" y="0.0" width="154.5" height="20.5"/>
@@ -161,7 +164,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="0pe-ck-hbY">
-                                <rect key="frame" x="289" y="153" width="42" height="563.5"/>
+                                <rect key="frame" x="289" y="197" width="42" height="563.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-Uk-bma">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
