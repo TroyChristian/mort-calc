@@ -15,20 +15,25 @@ class InputViewController: UIViewController {
 //    var fixedTerm:String?
 //    var fixedIR:String?
 //    var startDate:String?
+    @IBAction func CalculateButton(_ sender: Any) {
+        // unwrap tf values, convert to integers use create func, populate detailviewcontroller with that new morts propertys. make instance of controlle here. in segue we are going to pass that newMortgage.
+
+         guard let fixedMA = Int(inputMortgageAmount.text!) else {return}
+         guard let fixedTerm = Int(inputTerm.text!) else {return}
+         guard let fixedIR =  Int(IROutlet.text!) else {return}
+         guard let startDate = startDateOutlet.text else {return}
+          inputMortgage = mortgageController.createMortgage(loan:fixedMA, term: fixedTerm, interestRate: fixedIR, startDate:startDate)
+          print("I made it to line 26")
+             
+        //  performSegue(withIdentifier: "detailSegue", sender: sender)}
+    }
     
     @IBOutlet weak var inputTerm: UITextField!
     @IBOutlet weak var inputMortgageAmount: UITextField!
     
     @IBOutlet weak var IROutlet: UITextField!
     @IBOutlet weak var startDateOutlet: UITextField!
-    func CM(_ sender: Any) { // unwrap tf values, convert to integers use create func, populate detailviewcontroller with that new morts propertys. make instance of controlle here. in segue we are going to pass that newMortgage.
 
-       guard let fixedMA = Int(inputMortgageAmount.text!) else {return}
-       guard let fixedTerm = Int(inputTerm.text!) else {return}
-       guard let fixedIR =  Int(IROutlet.text!) else {return}
-       guard let startDate = startDateOutlet.text else {return}
-        inputMortgage = mortgageController.createMortgage(loan:fixedMA, term: fixedTerm, interestRate: fixedIR, startDate:startDate)
-        performSegue(withIdentifier: "detailSegue", sender: sender)}
 
         
         
@@ -78,23 +83,28 @@ class InputViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+  
         
        
             
         }
-//      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "detailSegue"{
-//            guard let vc = segue.destination as? DetailViewController else {return}
-//            vc.MC = mortgageController
-//            vc.detailMortgage = inputMortgage
-//
-//        }
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                  if segue.identifier == "detailSegue"{
+                      guard let vc = segue.destination as? DetailViewController else {return}
+                   vc.MC = mortgageController
+                      vc.detailMortgage = inputMortgage
+                    print("I MADE IT TO LINE 92")
+                    print(inputMortgage)
+                    print(vc.detailMortgage)
+            
+                 }
+
                 }
          
-            
+
             
         
-            
+}
 
         
 

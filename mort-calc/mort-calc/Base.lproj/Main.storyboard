@@ -72,7 +72,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate Mortgage"/>
                                 <connections>
-                                    <segue destination="von-me-n8s" kind="show" identifier="detailSegue" id="nRc-cq-Fsy"/>
+                                    <action selector="CalculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NWd-f6-UQ6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,7 +95,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="The Minimalist Mortgage Calculator" id="Lvw-1F-Xok">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="RP9-R2-UaL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="RP9-R2-UaL">
+                            <connections>
+                                <segue destination="von-me-n8s" kind="show" identifier="detailSegue" id="VYQ-6m-MAz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="IROutlet" destination="mac-TF-wGz" id="KME-Eb-4Us"/>
