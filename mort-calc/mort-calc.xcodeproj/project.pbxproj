@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		FB64DD322385FE5900CFCDB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD312385FE5900CFCDB0 /* AppDelegate.swift */; };
 		FB64DD342385FE5900CFCDB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD332385FE5900CFCDB0 /* SceneDelegate.swift */; };
-		FB64DD362385FE5900CFCDB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD352385FE5900CFCDB0 /* ViewController.swift */; };
 		FB64DD392385FE5900CFCDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB64DD372385FE5900CFCDB0 /* Main.storyboard */; };
 		FB64DD3B2385FE5B00CFCDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB64DD3A2385FE5B00CFCDB0 /* Assets.xcassets */; };
 		FB64DD3E2385FE5B00CFCDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB64DD3C2385FE5B00CFCDB0 /* LaunchScreen.storyboard */; };
 		FB64DD462385FE9300CFCDB0 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD452385FE9300CFCDB0 /* InputViewController.swift */; };
 		FB64DD4A238604EB00CFCDB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD49238604EB00CFCDB0 /* DetailViewController.swift */; };
+		FB64DD4C23863D9100CFCDB0 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD4B23863D9100CFCDB0 /* Mortgage.swift */; };
+		FB64DD4E2386F10200CFCDB0 /* MortgageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB64DD2E2385FE5900CFCDB0 /* mort-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mort-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB64DD312385FE5900CFCDB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB64DD332385FE5900CFCDB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB64DD352385FE5900CFCDB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB64DD382385FE5900CFCDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB64DD3A2385FE5B00CFCDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB64DD3D2385FE5B00CFCDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB64DD3F2385FE5B00CFCDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB64DD452385FE9300CFCDB0 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		FB64DD49238604EB00CFCDB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FB64DD4B23863D9100CFCDB0 /* Mortgage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
+		FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,11 @@
 			children = (
 				FB64DD312385FE5900CFCDB0 /* AppDelegate.swift */,
 				FB64DD332385FE5900CFCDB0 /* SceneDelegate.swift */,
-				FB64DD352385FE5900CFCDB0 /* ViewController.swift */,
 				FB64DD372385FE5900CFCDB0 /* Main.storyboard */,
+				FB64DD4B23863D9100CFCDB0 /* Mortgage.swift */,
 				FB64DD49238604EB00CFCDB0 /* DetailViewController.swift */,
 				FB64DD452385FE9300CFCDB0 /* InputViewController.swift */,
+				FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */,
 				FB64DD3A2385FE5B00CFCDB0 /* Assets.xcassets */,
 				FB64DD3C2385FE5B00CFCDB0 /* LaunchScreen.storyboard */,
 				FB64DD3F2385FE5B00CFCDB0 /* Info.plist */,
@@ -144,11 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB64DD362385FE5900CFCDB0 /* ViewController.swift in Sources */,
 				FB64DD322385FE5900CFCDB0 /* AppDelegate.swift in Sources */,
+				FB64DD4E2386F10200CFCDB0 /* MortgageController.swift in Sources */,
 				FB64DD4A238604EB00CFCDB0 /* DetailViewController.swift in Sources */,
 				FB64DD342385FE5900CFCDB0 /* SceneDelegate.swift in Sources */,
 				FB64DD462385FE9300CFCDB0 /* InputViewController.swift in Sources */,
+				FB64DD4C23863D9100CFCDB0 /* Mortgage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

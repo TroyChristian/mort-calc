@@ -9,13 +9,33 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    var MC:MortgageController?
+    var detailMortgage:Mortgage? 
+    @IBOutlet weak var MortgageAmountOutlet: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateViews()
+      
+    
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+    }
+    
+    func updateViews(){
+        guard isViewLoaded else { return }
+        guard let mortgageAmount = detailMortgage else {return}
+        
+        MortgageAmountOutlet.text? = String(mortgageAmount.loan)
+        print(mortgageAmount)
+        
+}
 
     /*
     // MARK: - Navigation

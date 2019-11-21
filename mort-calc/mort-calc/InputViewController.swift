@@ -9,8 +9,37 @@
 import UIKit
 
 class InputViewController: UIViewController {
-
+    var inputMortgage:Mortgage?
+    let mortgageController = MortgageController()
+//    var fixedMA:String?
+//    var fixedTerm:String?
+//    var fixedIR:String?
+//    var startDate:String?
+    
+    @IBOutlet weak var inputTerm: UITextField!
+    @IBOutlet weak var inputMortgageAmount: UITextField!
+    
+    @IBOutlet weak var IROutlet: UITextField!
     @IBOutlet weak var startDateOutlet: UITextField!
+    func CM(_ sender: Any) { // unwrap tf values, convert to integers use create func, populate detailviewcontroller with that new morts propertys. make instance of controlle here. in segue we are going to pass that newMortgage.
+
+       guard let fixedMA = Int(inputMortgageAmount.text!) else {return}
+       guard let fixedTerm = Int(inputTerm.text!) else {return}
+       guard let fixedIR =  Int(IROutlet.text!) else {return}
+       guard let startDate = startDateOutlet.text else {return}
+        inputMortgage = mortgageController.createMortgage(loan:fixedMA, term: fixedTerm, interestRate: fixedIR, startDate:startDate)}
+       // performSegue(withIdentifier: "detailSegue", sender: sender)
+        
+
+        
+        
+        
+        
+        
+    
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,17 +71,33 @@ class InputViewController: UIViewController {
     @objc
     func viewTapped(gestureRecognizer: UITapGestureRecognizer){
         view.endEditing(true)
-    
+        
+        
+ 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+       
+            
+        }
+//      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "detailSegue"{
+//            guard let vc = segue.destination as? DetailViewController else {return}
+//            vc.MC = mortgageController
+//            vc.detailMortgage = inputMortgage
+//
+//        }
+                }
+         
+            
+            
+        
+            
 
-}
-}
+        
+
+
+
