@@ -13,7 +13,8 @@ class DetailViewController: UIViewController {
     var MC:MortgageController?
     var detailMortgage:Mortgage?
     
-  
+    @IBOutlet weak var idLabelOutlet: UILabel!
+    
     @IBOutlet weak var MortgageAmountOutlet: UILabel!
     
     @IBOutlet weak var monthlyPaymentOutlet: UILabel!
@@ -59,6 +60,7 @@ class DetailViewController: UIViewController {
           detailMortgage?.startDate else {return}
        startDateOutlet.text? = startDate
         
+    
         
         calculations(mortgage:detailMortgage)
         
@@ -115,39 +117,26 @@ class DetailViewController: UIViewController {
         
         
         
-        print("I'm div1 \(div1)")
-        print("I'm i \(i)")
-        print("I'm p \(p)")
-        print("I'm numerator1 \(numerator1)")
-        print("I'm numerator1asDub \(numerator1asDub)")
-        print("I'm nAsDub \(nAsDub)")
-        print("I'm expo \(expo)")
-        print("I'm numdec \(numdec)")
-        print("I'm bigdaddypaymentday \(bigdaddypaymentday)")
-        print("I'm monthlyamount \(monthlyamount)")
-        print("I'm totalNumberOfPayments \(totalNumberOfPayments)")
-       print("I'm totalInterestPaid \(totalInterestPaid)")
-       print("I'm totalPayment \(totalPayment)")
-        
         monthlyPaymentOutlet.text = String(round(100 * monthlyamount)/100)
         totalNumberOfPaymentsOutlet.text = String(totalNumberOfPayments)
         totalInterestPaidOutlet.text = String(round(100 * totalInterestPaid)/100)
         totalPaymentOutlet.text = String(round(100 * totalPayment)/100)
         endDateOutlet.text = formattedDateString
+        guard let ID = detailMortgage?.code else {return}
+            idLabelOutlet.text? = String(ID)
         
         
         
-//        struct Mortgage{
-//         var loan:Int
-//         var term:Int
-//         var interestRate:Int
-//         var startDate:String
-        // var endDate:Date {
-             //return startDate.advanced(by: //31536000 * term) // number //of seconds in a year times //the amount of years in the term.
+
          }
-
-
+    
+    func saveButton(mortgage:Mortgage){
+       
+        
     }
+
+
+    
     /*
     // MARK: - Navigation
 
@@ -159,3 +148,4 @@ class DetailViewController: UIViewController {
     */
 
 
+}
