@@ -45,6 +45,10 @@ class InputViewController: UIViewController {
    
     
     override func viewDidLoad() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+          backgroundImage.image = UIImage(named: "background")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+          self.view.insertSubview(backgroundImage, at: 0)
         super.viewDidLoad()
         
         
