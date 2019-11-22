@@ -11,7 +11,7 @@ import Foundation
 struct Mortgage{
     var loan:Int
     var term:Int
-    var interestRate:Int
+    var interestRate:Double
     var startDate:String
    // var endDate:Date {
         //return startDate.advanced(by: //31536000 * term) // number //of seconds in a year times //the amount of years in the term.

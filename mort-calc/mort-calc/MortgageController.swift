@@ -9,8 +9,8 @@
 import Foundation
 class MortgageController{
     var  mortgages:[Mortgage] = []
-    func createMortgage(loan:Int, term:Int, interestRate:Int, startDate:String) -> Mortgage{
-        let newMortgage = Mortgage(loan: loan, term: term, interestRate: interestRate, startDate: startDate)
+    func createMortgage(loan:Int, term:Int, interestRate:Double, startDate:String) -> Mortgage{
+        let newMortgage = Mortgage(loan: loan, term: term, interestRate: Double(interestRate), startDate: startDate)
         mortgages.append(newMortgage)
        return newMortgage
         

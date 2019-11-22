@@ -20,7 +20,7 @@ class InputViewController: UIViewController {
 
          guard let fixedMA = Int(inputMortgageAmount.text!) else {return}
          guard let fixedTerm = Int(inputTerm.text!) else {return}
-         guard let fixedIR =  Int(IROutlet.text!) else {return}
+         guard let fixedIR =  Double(IROutlet.text!) else {return}
          guard let startDate = startDateOutlet.text else {return}
           inputMortgage = mortgageController.createMortgage(loan:fixedMA, term: fixedTerm, interestRate: fixedIR, startDate:startDate)
           

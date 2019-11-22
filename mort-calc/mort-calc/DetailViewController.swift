@@ -59,19 +59,46 @@ class DetailViewController: UIViewController {
           detailMortgage?.startDate else {return}
        startDateOutlet.text? = startDate
         
+        
+        calculations(mortgage:detailMortgage)
+        
 }
 
-    func calculations(mortgage:Mortgage){
-        var n = mortgage.term * -12
+    func calculations(mortgage:Mortgage?){
+        guard let mort = mortgage else {return}
+        var n = mort.term * -12
         
-        var div1 = mortgage.interestRate / 100
-        var i = div1 / 12
-        var p = mortgage.loan
-        var numerator1:Int = i + 1
+        var div1:Double = mort.interestRate / 100
+        var i:Double = div1 / 12
+        var p = Double(mort.loan)
+        var numerator1:Double = i + 1.0
         var numerator1asDub = Double(numerator1)
         var nAsDub = Double(n)
         var expo = pow(numerator1asDub, nAsDub)
-   
+        var numdec = 1.0 - expo
+        var bigdaddypaymentday = numdec / i
+        var monthlyamount = p / bigdaddypaymentday
+        
+        var totalNumberOfPayments = Double(n * -1)
+        var totalInterestPaid:Double?
+        var arg = totalNumberOfPayments - bigdaddypaymentday
+        totalInterestPaid = arg * monthlyamount
+       var totalPayment = totalInterestPaid + p
+        
+        
+        print("I'm div1 \(div1)")
+        print("I'm i \(i)")
+        print("I'm p \(p)")
+        print("I'm numerator1 \(numerator1)")
+        print("I'm numerator1asDub \(numerator1asDub)")
+        print("I'm nAsDub \(nAsDub)")
+        print("I'm expo \(expo)")
+        print("I'm numdec \(numdec)")
+        print("I'm bigdaddypaymentday \(bigdaddypaymentday)")
+        print("I'm monthlyamount \(monthlyamount)")
+        print("I'm totalNumberOfPayments \(totalNumberOfPayments)")
+       print("I'm totalInterestPaid \(totalInterestPaid)")
+       print("I'm totalPayment \(totalPayment)")
         
         
         
@@ -98,4 +125,4 @@ class DetailViewController: UIViewController {
     }
     */
 
-}
+
