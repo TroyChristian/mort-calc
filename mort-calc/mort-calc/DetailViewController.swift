@@ -129,10 +129,10 @@ class DetailViewController: UIViewController {
        print("I'm totalInterestPaid \(totalInterestPaid)")
        print("I'm totalPayment \(totalPayment)")
         
-        monthlyPaymentOutlet.text = String(monthlyamount)
+        monthlyPaymentOutlet.text = String(round(100 * monthlyamount)/100)
         totalNumberOfPaymentsOutlet.text = String(totalNumberOfPayments)
-        totalInterestPaidOutlet.text = String(totalInterestPaid)
-        totalPaymentOutlet.text = String(totalPayment)
+        totalInterestPaidOutlet.text = String(round(100 * totalInterestPaid)/100)
+        totalPaymentOutlet.text = String(round(100 * totalPayment)/100)
         endDateOutlet.text = formattedDateString
         
         
