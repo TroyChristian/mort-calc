@@ -62,9 +62,31 @@ class DetailViewController: UIViewController {
 }
 
     func calculations(mortgage:Mortgage){
+        var n = mortgage.term * -12
+        
+        var div1 = mortgage.interestRate / 100
+        var i = div1 / 12
+        var p = mortgage.loan
+        var numerator1:Int = i + 1
+        var numerator1asDub = Double(numerator1)
+        var nAsDub = Double(n)
+        var expo = pow(numerator1asDub, nAsDub)
+   
         
         
         
+        
+        
+//        struct Mortgage{
+//         var loan:Int
+//         var term:Int
+//         var interestRate:Int
+//         var startDate:String
+        // var endDate:Date {
+             //return startDate.advanced(by: //31536000 * term) // number //of seconds in a year times //the amount of years in the term.
+         }
+
+
     }
     /*
     // MARK: - Navigation
