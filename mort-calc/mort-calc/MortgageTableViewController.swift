@@ -12,6 +12,8 @@ class MortgageTableViewController: UITableViewController {
     var mortgageController = MortgageController() 
     var tableMortgage:Mortgage?
     override func viewDidLoad() {
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+       
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -38,7 +40,7 @@ class MortgageTableViewController: UITableViewController {
         
         // bookController.readBooks[indexPath.row]
         let mortgage = mortgageController.mortgages[indexPath.row]
-       
+        cell.backgroundColor =  UIColor.clear
         cell.mortgage = mortgage
    
         

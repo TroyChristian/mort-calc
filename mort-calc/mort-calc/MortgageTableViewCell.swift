@@ -19,6 +19,8 @@ class MortgageTableViewCell: UITableViewCell {
 //        // Initialization code
 //    }
 
+  
+       
     
         
         func updateViews(){
