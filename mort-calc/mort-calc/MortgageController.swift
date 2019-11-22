@@ -46,6 +46,16 @@ class MortgageController{
         saveToPersistentStore()
     }
     
+    @discardableResult func searchByID(arg:Int) -> Mortgage? {
+        for item in mortgages{
+            if item.code == arg {
+                return item
+            }
+            
+        }
+        return nil
+    }
+    
     private var mortgageListURL: URL? {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         

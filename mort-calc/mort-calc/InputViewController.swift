@@ -11,10 +11,24 @@ import UIKit
 class InputViewController: UIViewController {
     var inputMortgage:Mortgage?
     let mortgageController = MortgageController()
+    var result:Mortgage?
 //    var fixedMA:String?
 //    var fixedTerm:String?
 //    var fixedIR:String?
 //    var startDate:String?
+    @IBOutlet weak var idSearch: UITextField!
+    @IBAction func loadMortgageByID(_ sender: Any) {
+        guard let potentialID = idSearch.text else {return}
+        guard let intPotentialID = Int(potentialID) else {return}
+        result = mortgageController.searchByID(arg: intPotentialID)
+        
+        
+        if result != nil{
+            
+            shouldPerformSegue(withIdentifier: "loadingID", sender: self)
+        }
+        
+    }
     @IBAction func CalculateButton(_ sender: Any) {
         // unwrap tf values, convert to integers use create func, populate detailviewcontroller with that new morts propertys. make instance of controlle here. in segue we are going to pass that newMortgage.
 
@@ -93,10 +107,22 @@ class InputViewController: UIViewController {
             
         }
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                  if segue.identifier == "detailSegue"{
+        if segue.identifier == "detailSegue" && segue.identifier != "loadingID" {
                       guard let vc = segue.destination as? DetailViewController else {return}
                    vc.mortgageController = mortgageController
+            if inputMortgage != nil {
                       vc.detailMortgage = inputMortgage
+            }
+            else {
+                vc.detailMortgage = result
+            }
+                    if segue.identifier == "loadingID"{
+                        guard let vc = segue.destination as? DetailViewController else {return}
+                        
+                        vc.detailMortgage = result
+                        print("I'm line 118")
+                        print(result?.code)
+                    }
                     
                   
             

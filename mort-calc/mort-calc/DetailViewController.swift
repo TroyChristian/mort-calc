@@ -179,7 +179,7 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
         guard let unwrappedMC = mortgageController else {return}
         if segue.identifier == "savedSegue"{
-            print("Line 177")
+            
             guard let vc = segue.destination as? MortgageTableViewController else {return}
             vc.mortgageController = unwrappedMC // give TableView same mortgagecontroller as this view
             

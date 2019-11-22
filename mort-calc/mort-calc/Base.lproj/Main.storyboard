@@ -76,6 +76,21 @@
                                     <segue destination="von-me-n8s" kind="show" identifier="detailSegue" id="Eil-n1-6Wr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laA-8K-w8I">
+                                <rect key="frame" x="135" y="676" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Load Mortgage By ID"/>
+                                <connections>
+                                    <action selector="loadMortgageByID:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mt0-5J-C8M"/>
+                                    <segue destination="von-me-n8s" kind="show" identifier="detailSegue" id="H8V-bv-Sge"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQZ-lE-i8u">
+                                <rect key="frame" x="100" y="714" width="244" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -104,6 +119,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="IROutlet" destination="mac-TF-wGz" id="KME-Eb-4Us"/>
+                        <outlet property="idSearch" destination="bQZ-lE-i8u" id="tOY-vX-mxS"/>
                         <outlet property="inputMortgageAmount" destination="9wn-du-YrC" id="cOv-wa-MIn"/>
                         <outlet property="inputTerm" destination="tfW-BS-HBl" id="v79-vf-TZm"/>
                         <outlet property="startDateOutlet" destination="Z9O-1l-b9P" id="C4i-4K-LPt"/>
@@ -358,21 +374,6 @@
             </objects>
             <point key="canvasLocation" x="2813.04347826087" y="99.776785714285708"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="jXY-yI-RI7">
-            <objects>
-                <viewController id="eUI-CS-aDI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bqk-BT-lKn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cbw-Ys-fSo"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="up9-Cl-PaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3532" y="100"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jwJ-hO-Yl5">
             <objects>
@@ -397,6 +398,6 @@
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e4u-jl-I3W"/>
+        <segue reference="H8V-bv-Sge"/>
     </inferredMetricsTieBreakers>
 </document>
