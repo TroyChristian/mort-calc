@@ -96,7 +96,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="The Minimalist Mortgage Calculator" id="Lvw-1F-Xok">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="RP9-R2-UaL"/>
+                        <barButtonItem key="rightBarButtonItem" title="To Detail" id="RP9-R2-UaL">
+                            <connections>
+                                <segue destination="von-me-n8s" kind="show" identifier="detailSegue" id="e4u-jl-I3W"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="IROutlet" destination="mac-TF-wGz" id="KME-Eb-4Us"/>
@@ -285,4 +289,7 @@
     <resources>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="e4u-jl-I3W"/>
+    </inferredMetricsTieBreakers>
 </document>
