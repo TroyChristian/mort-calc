@@ -25,10 +25,10 @@ class MortgageTableViewCell: UITableViewCell {
             guard let mortgage = mortgage else {return}
         
            
-            idOutlet.text = String(mortgage.code)
+            idOutlet.text = "ID:\(String(mortgage.code))"
             
             guard let unwrappedNote = (mortgage.note) else {return}
-            notesOutlet.text = unwrappedNote
+            notesOutlet.text = "Notes: \(unwrappedNote)"
         }
 
         // Configure the view for the selected state
