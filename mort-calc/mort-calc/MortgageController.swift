@@ -37,6 +37,7 @@ class MortgageController{
           
           mortgages.remove(at: index)
           mortgages.insert(scratch, at: index)
+        saveToPersistentStore()
         
     }
     

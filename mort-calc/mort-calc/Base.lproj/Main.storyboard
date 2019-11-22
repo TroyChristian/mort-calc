@@ -216,12 +216,15 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIP-7W-ekh">
-                                <rect key="frame" x="333" y="104" width="46" height="22"/>
+                                <rect key="frame" x="8" y="814" width="46" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addNoteButton:" destination="von-me-n8s" eventType="touchUpInside" id="pfE-Y1-uvE"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jen-Vq-xqb">
-                                <rect key="frame" x="337" y="136" width="37" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jen-Vq-xqb">
+                                <rect key="frame" x="337" y="136" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -241,6 +244,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evX-oR-1gf">
+                                <rect key="frame" x="70" y="812" width="312" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add A Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkB-5j-igh">
+                                <rect key="frame" x="163" y="783" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -257,6 +273,7 @@
                         <outlet property="endDateOutlet" destination="t0d-hB-GhP" id="oWe-1f-suy"/>
                         <outlet property="idLabelOutlet" destination="0b5-8t-YTi" id="zye-MG-7uv"/>
                         <outlet property="monthlyPaymentOutlet" destination="Dyb-XM-4hJ" id="yJ7-QF-Hbl"/>
+                        <outlet property="noteTextField" destination="evX-oR-1gf" id="arQ-OK-47J"/>
                         <outlet property="startDateOutlet" destination="aq4-IA-qem" id="spN-Q6-ryO"/>
                         <outlet property="totalInterestPaidOutlet" destination="Num-r3-XLl" id="bcx-ay-uz3"/>
                         <outlet property="totalNumberOfPaymentsOutlet" destination="vmc-ZR-qbG" id="H9O-wN-mkR"/>

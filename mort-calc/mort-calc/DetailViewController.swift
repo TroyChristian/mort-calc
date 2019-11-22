@@ -13,6 +13,13 @@ class DetailViewController: UIViewController {
     var mortgageController:MortgageController?
     var detailMortgage:Mortgage?
     
+    var note:String? = "" {
+        didSet{
+            updateViews()
+        }
+    }
+    
+    
     @IBOutlet weak var idLabelOutlet: UILabel!
     
     @IBOutlet weak var MortgageAmountOutlet: UILabel!
@@ -32,12 +39,20 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var totalPaymentOutlet: UILabel!
     
    
+    @IBOutlet weak var noteTextField: UITextField!
     
+    @IBAction func addNoteButton(_ sender: Any) {
+        guard let newNote = noteTextField.text else {return}
+        note = newNote
+        print(note)
+        
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         updateViews()
       
     
@@ -59,6 +74,7 @@ class DetailViewController: UIViewController {
       guard let startDate =
           detailMortgage?.startDate else {return}
        startDateOutlet.text? = startDate
+        
         
     
         
@@ -125,10 +141,24 @@ class DetailViewController: UIViewController {
         guard let ID = detailMortgage?.code else {return}
             idLabelOutlet.text? = String(ID)
         
+        if note != "" {
+            guard let unwrapped = mortgageController else {return}
+            addNote(MVC: unwrapped)
+        }
+        
         
         
 
          }
+    
+    func addNote(MVC:MortgageController){
+        guard let newNote = note else {return}
+        guard let currentMortgage = detailMortgage else {return}
+        MVC.updateMortgage(mortgage: currentMortgage, newNote: newNote)
+        print(MVC.mortgages)
+        
+    }
+   
     
  
 
@@ -143,6 +173,7 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 
 }
