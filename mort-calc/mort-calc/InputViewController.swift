@@ -91,7 +91,7 @@ class InputViewController: UIViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                   if segue.identifier == "detailSegue"{
                       guard let vc = segue.destination as? DetailViewController else {return}
-                   vc.MC = mortgageController
+                   vc.mortgageController = mortgageController
                       vc.detailMortgage = inputMortgage
                     
                   

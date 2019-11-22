@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var MC:MortgageController?
+    var mortgageController:MortgageController?
     var detailMortgage:Mortgage?
     
     @IBOutlet weak var idLabelOutlet: UILabel!
@@ -131,6 +131,7 @@ class DetailViewController: UIViewController {
          }
     
     func saveButton(mortgage:Mortgage){
+        
        
         
     }

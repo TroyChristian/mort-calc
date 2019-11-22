@@ -8,11 +8,15 @@
 
 import Foundation
 class MortgageController{
+    init() {
+          loadFromPersistentStore()
+      }
     var  mortgages:[Mortgage] = []
     func createMortgage(loan:Int, term:Int, interestRate:Double, startDate:String) -> Mortgage{
         let number = Int.random(in: 0 ... 1000)
         let newMortgage = Mortgage(loan: loan, term: term, interestRate: Double(interestRate), startDate: startDate, code:number) //append new enddate when saved
         mortgages.append(newMortgage)
+        saveToPersistentStore()
        return newMortgage
         
     }

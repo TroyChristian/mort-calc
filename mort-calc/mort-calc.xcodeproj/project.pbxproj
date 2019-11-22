@@ -16,6 +16,7 @@
 		FB64DD4A238604EB00CFCDB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD49238604EB00CFCDB0 /* DetailViewController.swift */; };
 		FB64DD4C23863D9100CFCDB0 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD4B23863D9100CFCDB0 /* Mortgage.swift */; };
 		FB64DD4E2386F10200CFCDB0 /* MortgageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */; };
+		FB64DD522387C96000CFCDB0 /* mortgageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB64DD512387C96000CFCDB0 /* mortgageList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FB64DD49238604EB00CFCDB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FB64DD4B23863D9100CFCDB0 /* Mortgage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
 		FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageController.swift; sourceTree = "<group>"; };
+		FB64DD512387C96000CFCDB0 /* mortgageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mortgageList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				FB64DD49238604EB00CFCDB0 /* DetailViewController.swift */,
 				FB64DD452385FE9300CFCDB0 /* InputViewController.swift */,
 				FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */,
+				FB64DD512387C96000CFCDB0 /* mortgageList.plist */,
 				FB64DD3A2385FE5B00CFCDB0 /* Assets.xcassets */,
 				FB64DD3C2385FE5B00CFCDB0 /* LaunchScreen.storyboard */,
 				FB64DD3F2385FE5B00CFCDB0 /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				FB64DD3E2385FE5B00CFCDB0 /* LaunchScreen.storyboard in Resources */,
 				FB64DD3B2385FE5B00CFCDB0 /* Assets.xcassets in Resources */,
+				FB64DD522387C96000CFCDB0 /* mortgageList.plist in Resources */,
 				FB64DD392385FE5900CFCDB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
