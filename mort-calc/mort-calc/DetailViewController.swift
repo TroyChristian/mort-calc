@@ -80,10 +80,10 @@ class DetailViewController: UIViewController {
         var monthlyamount = p / bigdaddypaymentday
         
         var totalNumberOfPayments = Double(n * -1)
-        var totalInterestPaid:Double?
+        var totalInterestPaid:Double
         var arg = totalNumberOfPayments - bigdaddypaymentday
         totalInterestPaid = arg * monthlyamount
-       var totalPayment = totalInterestPaid + p
+       var totalPayment = totalInterestPaid + Double(p)
         
         
         print("I'm div1 \(div1)")
@@ -100,7 +100,10 @@ class DetailViewController: UIViewController {
        print("I'm totalInterestPaid \(totalInterestPaid)")
        print("I'm totalPayment \(totalPayment)")
         
-        
+        monthlyPaymentOutlet.text = String(monthlyamount)
+        totalNumberOfPaymentsOutlet.text = String(totalNumberOfPayments)
+        totalInterestPaidOutlet.text = String(totalInterestPaid)
+        totalPaymentOutlet.text = String(totalPayment)
         
         
         
