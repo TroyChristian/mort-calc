@@ -11,14 +11,17 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var MC:MortgageController?
-    var detailMortgage:Mortgage? 
+    var detailMortgage:Mortgage?
+    
+  
     @IBOutlet weak var MortgageAmountOutlet: UILabel!
     
     @IBOutlet weak var monthlyPaymentOutlet: UILabel!
     
     @IBOutlet weak var totalNumberOfPaymentsOutlet: UILabel!
-       @IBOutlet weak var startDateOutlet: UILabel!
+      
     
+    @IBOutlet weak var startDateOutlet: UILabel!
     
     @IBOutlet weak var endDateOutlet: UILabel!
     
@@ -26,6 +29,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var totalInterestPaidOutlet: UILabel!
     
     @IBOutlet weak var totalPaymentOutlet: UILabel!
+    
+   
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +55,17 @@ class DetailViewController: UIViewController {
         MortgageAmountOutlet.text? = String(mortgageAmount.loan)
         print(mortgageAmount)
         
+      guard let startDate =
+          detailMortgage?.startDate else {return}
+       startDateOutlet.text? = startDate
+        
 }
 
+    func calculations(mortgage:Mortgage){
+        
+        
+        
+    }
     /*
     // MARK: - Navigation
 
