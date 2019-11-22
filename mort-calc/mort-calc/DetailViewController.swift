@@ -130,11 +130,7 @@ class DetailViewController: UIViewController {
 
          }
     
-    func saveButton(mortgage:Mortgage){
-        
-       
-        
-    }
+ 
 
 
     

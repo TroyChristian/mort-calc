@@ -21,6 +21,25 @@ class MortgageController{
         
     }
     
+    func deleteMortgage(mortgage:Mortgage){
+        guard let index = mortgages.firstIndex(of:mortgage) else { return }
+        mortgages.remove(at:index)
+        saveToPersistentStore()
+        
+    }
+    
+    func updateMortgage(mortgage:Mortgage, newNote:String){
+        guard let index = mortgages.firstIndex(of:mortgage) else {return}
+        var scratch = mortgage
+          
+          scratch.note = newNote
+          
+          
+          mortgages.remove(at: index)
+          mortgages.insert(scratch, at: index)
+        
+    }
+    
     private var mortgageListURL: URL? {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         
