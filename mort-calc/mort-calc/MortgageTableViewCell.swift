@@ -13,24 +13,31 @@ class MortgageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var notesOutlet: UILabel!
     
-    var mortgage:Mortgage?
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
         
         func updateViews(){
-            guard let unwrappedID = (mortgage?.code) else {return}
-            idOutlet.text = String(unwrappedID)
+            guard let mortgage = mortgage else {return}
+        
+           
+            idOutlet.text = String(mortgage.code)
             
-            guard let unwrappedNote = (mortgage?.note) else {return}
+            guard let unwrappedNote = (mortgage.note) else {return}
             notesOutlet.text = unwrappedNote
         }
 
         // Configure the view for the selected state
-    }
-
+    
+    var mortgage:Mortgage?{
+         didSet {
+             updateViews()
+         }
+     }
 }
+
+

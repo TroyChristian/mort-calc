@@ -38,6 +38,7 @@ class MortgageTableViewController: UITableViewController {
         
         // bookController.readBooks[indexPath.row]
         let mortgage = mortgageController.mortgages[indexPath.row]
+       
         cell.mortgage = mortgage
    
         
