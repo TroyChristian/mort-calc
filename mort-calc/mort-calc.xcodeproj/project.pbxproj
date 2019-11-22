@@ -18,6 +18,7 @@
 		FB64DD4E2386F10200CFCDB0 /* MortgageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */; };
 		FB64DD522387C96000CFCDB0 /* mortgageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB64DD512387C96000CFCDB0 /* mortgageList.plist */; };
 		FB64DD542387E3EF00CFCDB0 /* MortgageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD532387E3EF00CFCDB0 /* MortgageTableViewController.swift */; };
+		FB64DD562387ED0500CFCDB0 /* MortgageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64DD552387ED0500CFCDB0 /* MortgageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageController.swift; sourceTree = "<group>"; };
 		FB64DD512387C96000CFCDB0 /* mortgageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mortgageList.plist; sourceTree = "<group>"; };
 		FB64DD532387E3EF00CFCDB0 /* MortgageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageTableViewController.swift; sourceTree = "<group>"; };
+		FB64DD552387ED0500CFCDB0 /* MortgageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				FB64DD532387E3EF00CFCDB0 /* MortgageTableViewController.swift */,
 				FB64DD4B23863D9100CFCDB0 /* Mortgage.swift */,
 				FB64DD49238604EB00CFCDB0 /* DetailViewController.swift */,
+				FB64DD552387ED0500CFCDB0 /* MortgageTableViewCell.swift */,
 				FB64DD452385FE9300CFCDB0 /* InputViewController.swift */,
 				FB64DD4D2386F10200CFCDB0 /* MortgageController.swift */,
 				FB64DD512387C96000CFCDB0 /* mortgageList.plist */,
@@ -161,6 +164,7 @@
 				FB64DD462385FE9300CFCDB0 /* InputViewController.swift in Sources */,
 				FB64DD4C23863D9100CFCDB0 /* Mortgage.swift in Sources */,
 				FB64DD542387E3EF00CFCDB0 /* MortgageTableViewController.swift in Sources */,
+				FB64DD562387ED0500CFCDB0 /* MortgageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

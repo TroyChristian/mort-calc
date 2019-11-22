@@ -9,7 +9,8 @@
 import UIKit
 
 class MortgageTableViewController: UITableViewController {
-
+    var mortgageController = MortgageController() 
+    var tableMortgage:Mortgage?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,25 +23,29 @@ class MortgageTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+   
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+       return  mortgageController.mortgages.count
+     
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "mortgageCell", for: indexPath) as? MortgageTableViewCell else {return UITableViewCell()}
+        
+      
+        
+        // bookController.readBooks[indexPath.row]
+        let mortgage = mortgageController.mortgages[indexPath.row]
+        cell.mortgage = mortgage
+   
+        
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,5 +91,6 @@ class MortgageTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
