@@ -44,7 +44,7 @@ class DetailViewController: UIViewController {
     @IBAction func addNoteButton(_ sender: Any) {
         guard let newNote = noteTextField.text else {return}
         note = newNote
-        print(note)
+       
         
         
     }
@@ -145,7 +145,9 @@ class DetailViewController: UIViewController {
             guard let unwrapped = mortgageController else {return}
             addNote(MVC: unwrapped)
         }
-        
+//        guard let unwrapped = mortgageController else {return}
+//        mortgageController?.clearMortgages(arg:unwrapped)
+       
         
         
 

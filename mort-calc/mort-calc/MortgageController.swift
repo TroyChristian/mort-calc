@@ -41,6 +41,11 @@ class MortgageController{
         
     }
     
+    func clearMortgages(arg:MortgageController){
+        self.mortgages = []
+        saveToPersistentStore()
+    }
+    
     private var mortgageListURL: URL? {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         
