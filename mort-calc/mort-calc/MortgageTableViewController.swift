@@ -58,17 +58,18 @@ class MortgageTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
+    
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+           // tableView.deleteRows(at: [indexPath], with: .fade)
+            let mortgage = mortgageController.mortgages[indexPath.row]
+            mortgageController.deleteMortgage(mortgage: mortgage)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -96,4 +97,6 @@ class MortgageTableViewController: UITableViewController {
     */
 
 
-}
+
+
+    } }
