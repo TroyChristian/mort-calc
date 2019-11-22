@@ -15,13 +15,21 @@ class MortgageTableViewController: UITableViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
        
         super.viewDidLoad()
+            let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(toggleEditing)) // create a bat button
+            navigationItem.rightBarButtonItem = editButton // assign button
+        }
+
+        @objc private func toggleEditing() {
+            tableView.setEditing(tableView.isEditing, animated: true) // Set opposite value of current editing status
+            navigationItem.rightBarButtonItem?.title = tableView.isEditing ? "Done" : "Edit" // Set title depending on the editing status
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    
 
     // MARK: - Table view data source
 
@@ -50,13 +58,14 @@ class MortgageTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+        let mortgage = mortgageController.mortgages[indexPath.row]
+        //mortgageController.updateMortgage(mortgage: mortgage, newNote: <#T##String#>)
         return true
     }
-    */
+    
 
     
     
