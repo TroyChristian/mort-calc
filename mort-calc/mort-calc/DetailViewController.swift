@@ -85,6 +85,35 @@ class DetailViewController: UIViewController {
         totalInterestPaid = arg * monthlyamount
        var totalPayment = totalInterestPaid + Double(p)
         
+        /*
+         Convert the ISO8601 string to date
+         let isoDate = "2016-04-14T10:44:00+0000"
+
+         let dateFormatter = DateFormatter()
+         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+         let date = dateFormatter.date(from:isoDate)!
+         Get the date components for year, month, day and hour from the date
+         let calendar = Calendar.current
+         let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
+         Finally create a new Date object and strip minutes and seconds
+         let finalDate = calendar.date(from:components)
+         */
+        let yearsToAdd = mort.term
+        var dateComponents = DateComponents()
+        dateComponents.year = yearsToAdd
+        let isoDate = mort.startDate
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let date = dateFormatter.date(from:isoDate)
+        let calendar = Calendar.current
+        guard let unwrappedDate = date else {return}
+        let futureDate = Calendar.current.date(byAdding: dateComponents, to: unwrappedDate)
+       guard let unwrappedFutureDate = futureDate else {return}
+         let formattedDateString = dateFormatter.string(from: unwrappedFutureDate)
+        
+        
         
         print("I'm div1 \(div1)")
         print("I'm i \(i)")
@@ -104,6 +133,7 @@ class DetailViewController: UIViewController {
         totalNumberOfPaymentsOutlet.text = String(totalNumberOfPayments)
         totalInterestPaidOutlet.text = String(totalInterestPaid)
         totalPaymentOutlet.text = String(totalPayment)
+        endDateOutlet.text = formattedDateString
         
         
         
