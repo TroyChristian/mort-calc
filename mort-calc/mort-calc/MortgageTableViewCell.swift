@@ -20,7 +20,7 @@ class MortgageTableViewCell: UITableViewCell {
 //    }
 
   
-       
+    
     
         
         func updateViews(){
@@ -31,6 +31,7 @@ class MortgageTableViewCell: UITableViewCell {
             
             guard let unwrappedNote = (mortgage.note) else {return}
             notesOutlet.text = "Notes: \(unwrappedNote)"
+            
         }
 
         // Configure the view for the selected state
